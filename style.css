@@ -21,7 +21,7 @@ p {
 }
 .container .card .card-container {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 10px;
+  border-radius: 40px;
   padding: 1rem;
   display: grid;
   grid-template-columns: 55% 45%;
@@ -30,44 +30,47 @@ p {
   width: 100%;
 }
 
-.main {
+.description {
   padding: 2rem;
-  margin: 2rem 2.5rem;
+  margin: 2rem 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.main .title {
+.description .title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: hsl(234, 29%, 20%);
 }
-.main .list {
+.description .list {
   margin-left: 1.5rem;
 }
-.main .list ul {
+.description .list ul {
   list-style-image: url("./assets/icon-list.svg");
   line-height: 1.6;
 }
-.main .list ul li {
+.description .list ul li {
   padding: 5px;
 }
-.main .form {
+.description .form {
   margin-top: 1rem;
 }
-.main .form form .email .validation {
+.description .form form .email .validation {
   display: flex;
   width: 100%;
   justify-content: space-between;
-}
-.main .form form .email .validation label {
   margin-bottom: 0.5rem;
 }
-.main .form form .email .validation .Error {
+.description .form form .email .validation p {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.description .form form .email .validation .Error {
   display: none;
   transition: all 0.4s ease-in-out;
 }
-.main .form form .email #email {
+.description .form form .email #email {
   width: 100%;
   padding: 1rem;
   border-radius: 10px;
@@ -85,7 +88,7 @@ p {
 }
 .btn:hover {
   background-image: linear-gradient(90deg, hsla(329, 100%, 70%, 0.85), hsla(4, 100%, 67%, 0.84));
-  box-shadow: 1px 1px hsl(231, 7%, 60%);
+  box-shadow: 0 10px 15px hsl(4, 100%, 92%);
   border: none;
 }
 
@@ -104,7 +107,7 @@ p {
 }
 .main-success .image img {
   width: 100%;
-  height: 100;
+  height: 100px;
 }
 
 .error-message {
@@ -125,19 +128,20 @@ p {
 @media only screen and (max-width: 375px) {
   .container {
     background-color: hsl(0, 0%, 100%);
+    overflow: hidden;
   }
   .card-container {
     display: flex !important;
     flex-direction: column-reverse;
+    align-items: center;
     padding: 0rem !important;
   }
-  .card-container .main {
+  .card-container .description {
     width: 100%;
-    margin: 0rem !important;
+    margin: 1rem 1.5rem !important;
   }
-  .card-container .image .img {
-    content: url("./assets/illustration-sign-up-mobile.svg");
-    width: 100%;
+  .form {
+    margin-left: 0rem;
   }
   .main-success {
     position: relative;
@@ -149,15 +153,15 @@ p {
   .main-success .image {
     margin-top: 8rem;
   }
-  .main-success .footer {
+  .main-success .btn-container {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 35px;
+    bottom: 75px;
     display: flex;
     justify-content: center;
   }
-  .main-success .footer .btn {
+  .main-success .btn-container .btn {
     margin: 0 auto;
     width: 90%;
   }

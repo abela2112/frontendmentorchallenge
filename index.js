@@ -32,14 +32,15 @@ form.addEventListener("submit", function (ev) {
   } else {
     container.innerHTML = `
     <div class="main-success">
-    <div class="image"><img src="./assets/icon-list.svg" /></div>
+    <div class="image">
+      <img src="./assets/icon-list.svg" /></div>
       <h1 class="title-success">Thanks you for subscribing!</h1>
       <p>
         a confirmation email has been sent to
         <strong>${email.value}</strong> you.Please open it and click the
         button inside to confirm your subscription.
       </p>
-<div class="footer">
+<div class="btn-container">
       <button class="btn" type="submit">Dismiss message</button></div>
     </div>
   `;

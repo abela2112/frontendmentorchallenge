@@ -12,7 +12,7 @@
     <div class="container">
       <div class="card">
         <div class="card-container">
-          <div class="main">
+          <div class="description">
             <h1 class="title">Stay update!</h1>
             <p>join 60,000+ product managers receiving monthly updates on;</p>
             <div class="list">
@@ -26,7 +26,7 @@
               <form>
                 <div class="email">
                   <div class="validation">
-                    <div><p>Email address</p></div>
+                    <p>Email address</p>
                     <div class="Error"></div>
                   </div>
 
@@ -44,12 +44,15 @@
               </form>
             </div>
           </div>
-          <div class="image">
-            <img
-              class="img"
-              src="./assets/illustration-sign-up-desktop.svg"
-              alt=""
-            />
+          <div class="image-container">
+            <img class="img" src="" alt="" />
+            <picture>
+              <source
+                srcset="./assets/illustration-sign-up-desktop.svg"
+                media="(min-width:375px)"
+              />
+              <img src="./assets/illustration-sign-up-mobile.svg" alt="" />
+            </picture>
           </div>
         </div>
       </div>
